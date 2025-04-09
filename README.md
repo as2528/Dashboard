@@ -20,10 +20,10 @@ This program can be used to quickly prototype and deploy CNN and FCNN architectu
 | **AvgPool2d**    | –                          | –                           | Optional    | Optional | Optional | –               | `kernel=2`, `padding=0`, `stride=2` |
 
 **Notes:**  
-> - All layers use a consistent internal config structure for backend handling.  
-> - `in_dim` and `out_dim` are mandatory for layers like `Conv2d` and `Linear`.  
-> - For `Dropout`, the probability is entered via the `in_dim` field. Consider updating for clarity.  
-> - Layers like `ReLU`, `Tanh`, `Sigmoid`, `Flatten`, `GELU`, and `Softmax` have no user-configurable parameters (except `Softmax`, which is hardcoded to `dim=1`).  
-> - Pooling layers accept optional parameters with sensible defaults.
+- All layers use a consistent internal config structure for backend handling.  
+- `in_dim` and `out_dim` are mandatory for layers like `Conv2d` and `Linear`.  
+- For `Dropout`, the probability is entered via the `in_dim` field. Consider updating for clarity.  
+- Layers like `ReLU`, `Tanh`, `Sigmoid`, `Flatten`, `GELU`, and `Softmax` have no user-configurable parameters (except `Softmax`, which is hardcoded to `dim=1`).  
+- Pooling layers accept optional parameters with sensible defaults.
 
 
