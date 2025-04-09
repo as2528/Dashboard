@@ -75,15 +75,13 @@ The app accepts **CSV** files for tabular data and **ZIP** files for image datas
 ### CSV Format
 
 Your CSV should look like this (headers must match exactly):
-dataset.csv
-├── x1, x2, x3, ..., y
-│
-├── 0.5, 1.2, 3.4, ..., 0
-│
-├── 0.7, 0.8, 2.1, ..., 1
-│
-└── ...
 
+dataset.csv
+
+- x1, x2, x3, ..., y
+- 0.5, 1.2, 3.4, ..., 0
+- 0.7, 0.8, 2.1, ..., 1
+- ...
 
 - `x1, x2, ..., xn` are your features.
 - `y` is the label.
@@ -95,26 +93,20 @@ dataset.csv
 ### ZIP Format (Image Dataset)
 
 Organize your `.zip` file like this:
-📦 dataset.zip
 
-├── 📁 class1
-│
-│   ├── 🖼️ image1.jpg
-│
-│   ├── 🖼️ image2.jpg
-│
-│   └── ...
-│
-├── 📁 class2
-│
-│   ├── 🖼️ image1.jpg
-│
-│   ├── 🖼️ image2.jpg
-│
-│   └── ...
-│
-└── ...
 
+dataset.zip
+- class1
+  - image1.jpg
+  - image2.jpg
+  - ...
+
+- class2
+  - image1.jpg
+  - image2.jpg
+  - ...
+
+- ...
 
 
 - Each folder represents a class label.
