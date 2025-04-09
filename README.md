@@ -15,6 +15,7 @@ The program is fully editable and should be easily extendable; you can easily ad
 - [File Handling System](#-file-handling-system)
   - [CSV Format](#csv-format)
   - [ZIP Format (Image Dataset)](#zip-format-image-dataset)
+- [Returns]
 - [Extendability](#-extendability)
 - [Final Note](#-final-note)
 
@@ -108,9 +109,18 @@ dataset.zip
 - Non-image files inside folders will be ignored.
 - The app automatically extracts and deletes temporary files after training.
 - The program **only accepts zip** files. Make sure the file is zipped!
+- If any corrupted file is skipped the program outputs an info message on the UI. 
 
 ---
+## Returns
 
+The program returns the following:
+- A loss plot showing the losses through the epochs (downloadable).
+- A video showing the path the model followed to its minima if the checkbox is selected, otherwise a black video is generated (downloadable).
+- The complete trained model and architecture (downloadable).
+- Losses on every Epoch written out at the bottom of the screen (readable but not downloadable).
+
+---
 ## Extendability
 
 The program is built to be modular:
