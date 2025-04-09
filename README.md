@@ -95,17 +95,26 @@ dataset.csv
 ### ZIP Format (Image Dataset)
 
 Organize your `.zip` file like this:
-
 📦 dataset.zip
+
 ├── 📁 class1
+│
 │   ├── 🖼️ image1.jpg
+│
 │   ├── 🖼️ image2.jpg
+│
 │   └── ...
+│
 ├── 📁 class2
+│
 │   ├── 🖼️ image1.jpg
+│
 │   ├── 🖼️ image2.jpg
+│
 │   └── ...
+│
 └── ...
+
 
 
 - Each folder represents a class label.
