@@ -10,12 +10,13 @@ The program is fully editable and should be easily extendable; you can easily ad
 
 ## Table of Contents
 - [Supported Layers & Parameters](#-supported-layers--parameters)
-- [Architecture Validation](#️-architecture-validation)
+- [Architecture Validation](#-architecture-validation)
 - [CUDA Errors](#-cuda-errors)
 - [File Handling System](#-file-handling-system)
   - [CSV Format](#csv-format)
   - [ZIP Format (Image Dataset)](#zip-format-image-dataset)
-- [Returns]
+- [Returns](#returns)
+- [Training Tab: Image Resize, Channels, Loss Function, Optimizer](#training-tab-image-resize-channels-loss-function-optimizer)
 - [Extendability](#-extendability)
 - [Final Note](#-final-note)
 
@@ -121,6 +122,83 @@ The program returns the following:
 - Losses on every Epoch written out at the bottom of the screen (readable but not downloadable).
 
 ---
+
+## Training Tab: Image Resize, Channels, Loss Function, Optimizer
+### Image Resize
+
+- All input images are resized before training.
+
+- Set value in: Image Resize (size_box)
+
+- Example: 28 → Resizes images to 28×28.
+
+- Purpose: Ensure consistent input size to avoid shape mismatches.
+
+## Input Channels
+
+- Control color mode of input images.
+
+    - Options:
+
+        1 → Grayscale
+
+        3 → RGB color
+
+    - Set in: Input Channels (channel_dropdown)
+
+    **Note:** For tabular data (CSV), this is ignored.
+
+## Loss Function
+
+### Define loss calculation for backpropagation.
+
+Options:
+
+- CrossEntropyLoss: For classification (e.g., cat/dog). Use when labels are class indices (0, 1, 2, ...). Softmax is internal.
+
+- MSELoss: For regression or if you want probability output with manual softmax.
+
+- Set in: Loss Function (loss_dropdown)
+    Behavior:
+
+       - If MSELoss is selected and classification data is used, one-hot encoding + softmax is applied internally.
+
+        - If CrossEntropyLoss, ensure target labels are integers (not one-hot).
+
+## Optimizer
+
+- Controls weight updates during training.
+
+  Options:
+
+        - Adam: Adaptive learning rate, recommended default.
+
+        - SGD: Standard stochastic gradient descent.
+
+    Set in: Optimizer in the dropdown
+
+Corrupted Image Handling
+
+    - Corrupted images are skipped automatically.
+
+    - Warnings are shown in the Gradio Info bubble.
+
+Workflow Summary
+
+  - Images resized to target size.
+
+  - Images converted to target channel mode (RGB or grayscale).
+
+  - Dataset checked for corruptions, skipped if needed.
+
+  - Loss and optimizer selected based on UI.
+
+  - Training starts, logs are shown live.
+
+**Notes**
+
+  - Tabular data (CSV): Resize and channels are ignored.
+  - Animation: If enabled, generates 3D loss descent animation.
 ## Extendability
 
 The program is built to be modular:
