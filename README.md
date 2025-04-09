@@ -8,7 +8,7 @@ The program is fully editable and should be easily extendable; you can easily ad
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 - [Supported Layers & Parameters](#-supported-layers--parameters)
 - [Architecture Validation](#️-architecture-validation)
 - [CUDA Errors](#-cuda-errors)
