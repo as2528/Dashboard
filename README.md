@@ -7,9 +7,9 @@ This program can be used to quickly prototype and deploy CNN and FCNN architectu
 |------------------|----------------------------|-----------------------------|-------------|---------|--------|-----------------|-----------|
 | **Conv2d**       | ✅ Required                | ✅ Required                 | Optional    | Optional | Optional | `bias` (bool)   | `kernel=3`, `padding=1`, `stride=1`, `bias=True` |
 | **Linear**       | ✅ Required                | ✅ Required                 | –           | –       | –      | –               | None |
-| **Dropout**      | ✅ Dropout probability     | Same as `in_dim`            | –           | –       | –      | –               | Provide probability (e.g., `0.5`) |
-| **LeakyReLU**    | ⚙️ Used for `negative_slope` | Same as `in_dim`            | –           | –       | –      | `negative_slope` (float) | `negative_slope=0.01` |
-| **ELU**          | ⚙️ Used for `alpha`       | Same as `in_dim`            | –           | –       | –      | `alpha` (float)         | `alpha=1.0` |
+| **Dropout**      | ✅ Dropout probability     | Same as `in_dim`            | –           | –       | –      | –               | Provide probability (default= `0.5`) |
+| **LeakyReLU**    | Used for `negative_slope`  | Same as `in_dim`            | –           | –       | –      | `negative_slope` (float) | `negative_slope=0.01` |
+| **ELU**          | Used for `alpha`           | Same as `in_dim`            | –           | –       | –      | `alpha` (float)         | `alpha=1.0` |
 | **ReLU**         | –                          | –                           | –           | –       | –      | –               | No parameters |
 | **Tanh**         | –                          | –                           | –           | –       | –      | –               | No parameters |
 | **Sigmoid**      | –                          | –                           | –           | –       | –      | –               | No parameters |
