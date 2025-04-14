@@ -215,6 +215,9 @@ The program is built to be modular:
 
 If you think of improvements or want to extend the features, feel free to hack away!
 
+Huggingface: https://huggingface.co/spaces/as2528/Dashboard
+Docker: https://hub.docker.com/r/as2528/neural-dashboard
+
 ---
 
 
